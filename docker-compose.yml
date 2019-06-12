@@ -1,6 +1,86 @@
 version: '3'
+
 services:
-  web:
-    build: .
+
+#‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+# Sets up the server container 
+#_________________________________
+
+  server:
+    build: ./server
+    expose:
+      - ${SERVER_PORT}
     ports:
-      - "3000:3000"
+      - ${SERVER_PORT}:${SERVER_PORT}
+    environment:
+      API_HOST: ${API_HOST}
+      SERVER_PORT: ${SERVER_PORT}
+      DATABASE_USERNAME: root
+      DATABASE_USERNAME: example
+    volumes:
+      - ./server:/srv/chowrate-server/src
+    links:
+      - database
+    depends_on:
+      - database
+    command: npm run server
+    # networks:
+    #   - chowrate-network
+
+
+    
+#‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+# Sets up the client container 
+#_________________________________
+
+  client:
+    build: ./client
+    expose:
+      - 4000
+    ports:
+      - 4000:3000
+    volumes:
+      - ./client/src:/srv/chowrate-client/src
+      - ./client/public:/srv/chowrate-client/public
+    links:
+      - server
+    command: npm run start
+    # networks:
+      # - chowrate-network
+
+
+#‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+# Sets up the database container 
+#_________________________________
+
+  database:
+    image: mongo
+    restart: always
+    environment:
+      DATABASE_USERNAME: root
+      DATABASE_USERNAME: example
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_PORT}
+    command: mongod --smallfiles
+    # networks:
+    #   - chowrate-network
+
+
+#‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+# Sets up the chowrate network
+#_________________________________
+networks:
+  chowrate-network:
+    driver: bridge
+
+
+#‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+# Notes
+#_________________________________
+# - build: Path to the service's Dockerfile
+# - expose: Exposes ports in the container that are also used in ports
+# - ports: Maps ports from container:host
+# - environment: Injects environment variables
+# - volumes: The volumes mounted here update in from host:container when changes are made
+# - command: Code is run after the container is running... overrides the Docker CMD
+# - links: Links the container to other services described in this docker-compose.yml... references the *name* of the service
