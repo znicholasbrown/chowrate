@@ -6,10 +6,11 @@ WORKDIR /srv/chowrate-server
 
 # Wildcard gets package.json && package-lock.json
 COPY package*.json /srv/chowrate-server/
-RUN npm install
 
 # Copy local code to the container
 COPY . /srv/chowrate-server/
+
+RUN npm install
 
 # Start the server
 CMD ["npm", "run", "server"]

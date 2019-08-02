@@ -10,8 +10,10 @@ services:
     build: ./server
     expose:
       - ${SERVER_PORT}
+      - ${APOLLO_PORT}
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
+      - ${APOLLO_PORT}:${APOLLO_PORT}
     environment:
       API_HOST: ${API_HOST}
       SERVER_PORT: ${SERVER_PORT}
@@ -24,8 +26,8 @@ services:
     depends_on:
       - database
     command: npm run server
-    # networks:
-    #   - chowrate-network
+    networks:
+      - chowrate-network
 
 
     
@@ -36,17 +38,17 @@ services:
   client:
     build: ./client
     expose:
-      - 4000
+      - 8005
     ports:
-      - 4000:3000
+      - 3000:8005
     volumes:
-      - ./client/src:/srv/chowrate-client/src
-      - ./client/public:/srv/chowrate-client/public
+      - ./client/:/srv/chowrate-client
+      - /srv/chowrate-client/node_modules
     links:
       - server
     command: npm run start
-    # networks:
-      # - chowrate-network
+    networks:
+      - chowrate-network
 
 
 #‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -62,8 +64,8 @@ services:
     ports:
       - ${DATABASE_PORT}:${DATABASE_PORT}
     command: mongod --smallfiles
-    # networks:
-    #   - chowrate-network
+    networks:
+      - chowrate-network
 
 
 #‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
