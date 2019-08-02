@@ -1,0 +1,7 @@
+// This file is required for vscode to use the experimentalDecorators option
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "allowJs": true
+    }
+}
