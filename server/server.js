@@ -24,6 +24,19 @@ const typeDefs = gql`
   type Query {
     "A simple type for getting started!"
     hello: String
+  },
+  type User {
+    id: String,
+    firstName: String,
+    lastName: String,
+    handle: String,
+    numberReviews: Number,
+    averageRating: Number
+  },
+  type Review {
+    rating: Number,
+    userId: User.userId,
+    notes: String
   }
 `;
 

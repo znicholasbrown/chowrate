@@ -1,0 +1,14 @@
+[
+  {
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "note": "Probably best as a happy hour place."
+  },
+  {
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "note": "Notes: Tasty sauces served with tacos. Would most likely want to come back for margaritas with the complimentary chips and salsa."
+  }
+]

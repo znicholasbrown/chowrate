@@ -1,0 +1,164 @@
+[
+  {
+    "ratingId": 0,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 3,
+    "item": "Guacamole",
+    "note": "Quite bland"
+  },
+  {
+    "ratingId": 1,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 5,
+    "item": "Taco - Al Pastor",
+    "note": "Canned pineapple? Tasted fine but the canned pineapple taste was a bit too much"
+  },
+  {
+    "ratingId": 2,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 2,
+    "item": "Taco - Lamb",
+    "note": "Not lamb? Seemed identical to the al pastor, just without pineapple"
+  },
+  {
+    "ratingId": 3,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 8,
+    "item": "Taco - Carnitas",
+    "note": "Very flavorful, especially good with the orange salsa "
+  },
+  {
+    "ratingId": 4,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 10,
+    "item": "Margaritas",
+    "note": "really good skinny margaritas, especially the passion fruit. Very fresh with lime juice"
+  },
+  {
+    "ratingId": 5,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 10,
+    "item": "Atmosphere - Outside",
+    "note": ""
+  },
+  {
+    "ratingId": 6,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 4,
+    "item": "Atmosphere - Inside",
+    "note": "Kinda musty"
+  },
+  {
+    "ratingId": 6,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 6,
+    "item": "Location",
+    "note": "Nice neighborhood, not metro accessible"
+  },
+  {
+    "ratingId": 6,
+    "reviewId": 0,
+    "userId": 0,
+    "locationId": 0,
+    "chows": 6,
+    "item": "Salsa",
+    "note": "The spiciness is about the only flavor. Nice pico touch though, feels fresh."
+  },
+  {
+    "ratingId": 7,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 5,
+    "item": "Guacamole",
+    "note": "Tortilla chips nice and warm."
+  },
+  {
+    "ratingId": 8,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 7,
+    "item": "Salsa",
+    "note": "Super unique salsa, very fresh. Almost an in between of salsa and pico."
+  },
+  {
+    "ratingId": 8,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 5,
+    "item": "Taco - Al Pastor",
+    "note": ""
+  },
+  {
+    "ratingId": 9,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 1,
+    "item": "Taco - Lamb",
+    "note": "Tasty, but almost certain it was just the al pastor meat without the pineapple."
+  },
+  {
+    "ratingId": 10,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 6,
+    "item": "Taco - Carnitas",
+    "note": ""
+  },
+  {
+    "ratingId": 11,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 10,
+    "item": "Margaritas",
+    "note": "‘Skinny’ margarita had just the right amount of sweetness (lime, triple sec, tequila). Nick’s passion fruit version was also super tasty and not too sweet. Skinny strawberry margarita ☺️👍🏽🙌🏽🥰💦💦💦"
+  },
+  {
+    "ratingId": 12,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 8,
+    "item": "Atmosphere - Outside",
+    "note": ""
+  },
+  {
+    "ratingId": 13,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 4,
+    "item": "Atmosphere - Inside",
+    "note": ""
+  },
+  {
+    "ratingId": 14,
+    "reviewId": 1,
+    "userId": 1,
+    "locationId": 0,
+    "chows": 7,
+    "item": "Location",
+    "note": ""
+  }
+]

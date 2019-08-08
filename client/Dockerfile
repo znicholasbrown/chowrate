@@ -14,11 +14,9 @@ COPY . /srv/chowrate-client/
 # before running `npm install` to ensure it's
 # available for any packages that need it (looking at you node-sass >.>)
 # Python and its associates are removed after npm install has finished
-RUN apk --no-cache add --virtual native-deps \
-  g++ gcc libgcc libstdc++ linux-headers make python && \
-  npm install --quiet node-gyp -g &&\
-  npm install --quiet && \
-  apk del native-deps
+RUN apk add --no-cache --virtual .build-deps alpine-sdk python \
+  && npm install --production --silent \
+  && apk del .build-deps
 
 # Start the server
 CMD ["npm", "run", "start"]

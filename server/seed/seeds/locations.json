@@ -1,0 +1,18 @@
+[
+  {
+    "locationId": 0,
+    "locationName": "Los Cuates Restaurant Adams Morgan",
+    "lat": 38.921325,
+    "lng": -77.041927,
+    "address": "2429 18th St NW, Washington, DC 20009",
+    "averageChows": 0
+  },
+  {
+    "locationId": 1,
+    "locationName": "Taqueria Los Compadres",
+    "lat": 38.931638,
+    "lng": -77.038279,
+    "address": "2103, 3213 Mt Pleasant St NW, Washington, DC 20010",
+    "averageChows": 0
+  }
+]
